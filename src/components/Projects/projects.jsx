@@ -10,8 +10,9 @@ import LeftParter from '../../assets/projects/leftParter.png';
 import RightParter from '../../assets/projects/rightParter.png';
 import RightFloor from '../../assets/projects/rightFloor.png';
 import LeftFloor from '../../assets/projects/leftFloor.png';
-import { UsableArea } from './components/usableArea/usableArea';
-import * as RoomsSize from './components/usableArea/roomsSize'
+import {UsableArea } from './components/usableArea/usableArea';
+import {RoomsSize} from './consts/roomsSize';
+import {ApartmentType} from './consts/apartamentType'
 
 
 export class Projects extends Component {
@@ -24,12 +25,12 @@ export class Projects extends Component {
     }
 
 
-    changeProjectImage(selectedApartment) {
+    changeSelectedApartment(selectedApartment) {
         this.setState({selectedApartment})
     }
 
-    getRoomSize() { 
-        return RoomsSize.RoomsSize.filter(room => {
+    getRoomSizeForSelectedApartment () { 
+        return RoomsSize.filter(room => {
             return room.name === this.state.selectedApartment
         })
     }
@@ -37,16 +38,16 @@ export class Projects extends Component {
     renderImage() {
         let selectedApartment = this.state.selectedApartment;
 
-        if(selectedApartment === 'leftParter') {
+        if(selectedApartment === ApartmentType.LEFT_PARTER) {
             return LeftParter;
         }
-        else if(selectedApartment === 'rightParter') {
+        else if(selectedApartment === ApartmentType.RIGHT_PARTER) {
             return RightParter
         }
-        else if(selectedApartment === 'rightFloor') {
+        else if(selectedApartment === ApartmentType.RIGHT_FLOOR) {
             return RightFloor
         }
-        else {
+        else if(selectedApartment === ApartmentType.LEFT_FLOOR) {
             return LeftFloor
         }
     }
@@ -60,27 +61,27 @@ export class Projects extends Component {
                 <UsableAreaWrapper>
                     <ButtonsWrapper>
                         <StoreyButton
-                            onClick={ () => this.changeProjectImage('leftParter')}
+                            onClick={ () => this.changeSelectedApartment('leftParter')}
                         > 
                             PARTER LEWY 
                         </StoreyButton>
                         <StoreyButton 
-                            onClick={ () => this.changeProjectImage('rightParter')}
+                            onClick={ () => this.changeSelectedApartment('rightParter')}
                         > 
                             PARTER PRAWY 
                         </StoreyButton>
                         <StoreyButton 
-                            onClick={ () => this.changeProjectImage('leftFloor')}
+                            onClick={ () => this.changeSelectedApartment('leftFloor')}
                         > 
                             PIĘTRO LEWE 
                         </StoreyButton>
                         <StoreyButton 
-                            onClick={ () => this.changeProjectImage('rightFloor')}
+                            onClick={ () => this.changeSelectedApartment('rightFloor')}
                         > 
                             PIĘTRO PRAWE 
                         </StoreyButton>
                     </ButtonsWrapper>
-                    <UsableArea sizes={ () => this.getRoomSize()}/>
+                    <UsableArea sizes={ () => this.getRoomSizeForSelectedApartment ()[0]}/>
                 </UsableAreaWrapper>
             </ProjectContainer>
         )

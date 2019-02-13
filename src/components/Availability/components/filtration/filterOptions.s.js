@@ -18,15 +18,13 @@ export const FilterOptionsContainer = glamorous.div(props => {
     }
 })
 
-export const FilterName = glamorous.div(props => {
-    return {
-        height: '35px',
-        width: '135px',
-        float: 'left',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-    }
+export const FilterName = glamorous.div({
+    height: '35px',
+    width: '135px',
+    float: 'left',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
 })
 
 export const ArrowIcon = glamorous.div(props => {
@@ -43,20 +41,16 @@ export const ArrowIcon = glamorous.div(props => {
     }
 })
 
-export const FilterOption = glamorous.input(propx => {
-    return {
-        cursor: 'pointer',
-        width: '23px',
-        height: '23px',
-    }
+export const FilterOption = glamorous.input({
+    cursor: 'pointer',
+    width: '23px',
+    height: '23px',
 })
 
-export const OptionLabel = glamorous.div(props => {
-    return {
-        height: '35px',
-        width: '170px',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center'
-    }
+export const OptionLabel = glamorous.div({
+    height: '35px',
+    width: '170px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
 })

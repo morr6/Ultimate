@@ -1,49 +1,41 @@
 import glamorous from 'glamorous';
 
-export const MainContainer = glamorous.div(props => {
-    return {
-        paddingTop: '100px',
-        height: '740px',
-        width: '1920px',
-        position: 'relative'
+export const MainContainer = glamorous.div({
+    paddingTop: '100px',
+    height: '740px',
+    width: '1920px',
+    position: 'relative'
+})
+
+export const Filtration = glamorous.div({
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0 375px 0 375px',
+    position: 'relative',
+    zIndex: 1,
+})
+
+export const FilterButton = glamorous.button({
+    background: '#54555a',
+    color: 'white',
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: 'bold',
+    border: 'none',
+    height: '35px',
+    width: '370px',
+    cursor: 'pointer',
+    outline: 'none',
+
+    ':active' : {
+        transition: '.1s',
+        transform: 'scale(.95)'
     }
 })
 
-export const Filtration = glamorous.div(props => {
-    return {
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '0 375px 0 375px',
-        position: 'relative',
-        zIndex: 1,
-    }
-})
-
-export const FilterButton = glamorous.button(props => {
-    return {
-        background: '#54555a',
-        color: 'white',
-        fontFamily: 'Roboto, sans-serif',
-        fontWeight: 'bold',
-        border: 'none',
-        height: '35px',
-        width: '370px',
-        cursor: 'pointer',
-        outline: 'none',
-
-        ':active' : {
-            transition: '.1s',
-            transform: 'scale(.95)'
-        }
-    }
-})
-
-export const PaginationButtons = glamorous.div(props => {
-    return {
-        padding: '0 0 0 845px',
-        position: 'absolute',
-        top: '700px',
-    }
+export const PaginationButtons = glamorous.div({
+    padding: '0 0 0 845px',
+    position: 'absolute',
+    top: '700px',
 })
 
 export const PageNumber = glamorous.button(props => {

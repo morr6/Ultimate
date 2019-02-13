@@ -80,17 +80,15 @@ export const ContactAdress = glamorous.div(props => {
     }
 })
 
-export const ContactForm = glamorous.div(props => {
-    return {
-        width: '370px',
-        height: '500px',
-        float: 'left',
-        marginLeft: '170px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    }
+export const ContactForm = glamorous.div({
+    width: '370px',
+    height: '500px',
+    float: 'left',
+    marginLeft: '170px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
 })
 
 export const FormInput = glamorous.input(props => {
@@ -122,29 +120,25 @@ export const ContactMessage = glamorous.textarea(props => {
     }
 })
 
-export const CodeInputs = glamorous.div(props => {
-    return {
-        display: 'flex',
-        justifyContent: 'space-between',
-        height: '35px',
-        width: '370px',
-    }
+export const CodeInputs = glamorous.div({
+    display: 'flex',
+    justifyContent: 'space-between',
+    height: '35px',
+    width: '370px',
 })
 
-export const SubmintButton = glamorous.button(props => {
-    return {
-        background: '#54555a',
-        color: 'white',
-        height: '35px',
-        width: '370px',
-        border: 'none',
-        outline: 'none',
-        fontFamily: RobotoFont,
-        fontWeight: 'bold',
-        cursor: 'pointer',
+export const SubmintButton = glamorous.button({
+    background: '#54555a',
+    color: 'white',
+    height: '35px',
+    width: '370px',
+    border: 'none',
+    outline: 'none',
+    fontFamily: RobotoFont,
+    fontWeight: 'bold',
+    cursor: 'pointer',
 
-        ':active' : {
-            transform: 'scale(.95)'
-        }
+    ':active' : {
+        transform: 'scale(.95)'
     }
 })

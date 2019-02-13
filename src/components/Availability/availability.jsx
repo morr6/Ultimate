@@ -7,7 +7,7 @@ import {MainContainer,
     } from './availability.s';
 import {FilterOptions} from './components/filtration/filterOptions';
 import { ApartmentsSpecification } from './components/apartmentsSpecification/apartmentsSpecification';
-import * as Database from './components/apartmentsTable/apartmentsDatabase'
+import {Database} from './mock/apartmentsDatabase'
 
 export class Availability extends Component {
 
@@ -22,7 +22,7 @@ export class Availability extends Component {
     } 
 
     componentDidMount() {
-        this.setState({apartments: Database.Database})
+        this.setState({apartments: Database})
     }
 
     selectPage(page) {
@@ -75,7 +75,7 @@ export class Availability extends Component {
                         options={['do 200000zł','200000zł-300000zł','od 300000zł']}
                     />
                     <FilterButton 
-                        onClick={() => this.filter(Database.Database, this.state.filters)}
+                        onClick={() => this.filter(Database, this.state.filters)}
                     > 
                         FILTROWANIE 
                     </FilterButton>

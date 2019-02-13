@@ -15,8 +15,9 @@ import {ContactContaincer,
     } from './contact.s';
 import IconSrc from '../../assets/contact/icon.png';
 import LogoSrc from '../../assets/contact/logo.png'
-import { validation } from './validation';
-import { MessageSent } from './messageSent/messageSent';
+import {validation} from './utilities/validation';
+import {MessageSent} from './messageSent/messageSent';
+import {generateRandomCode} from './utilities/generateRandomCode'
 
 export class Contact extends Component {
 
@@ -24,7 +25,7 @@ export class Contact extends Component {
         super();
         
         this.state = {
-            generatedCode: this.generateRandomCode(),
+            generatedCode: generateRandomCode(),
             validation: {
                 name: true,
                 email: true,
@@ -71,19 +72,6 @@ export class Contact extends Component {
         const { formValues } = this.state;
         
         this.setState({ validation: validation(formValues, this.state.generatedCode) })
-    }
-
-    
-
-    generateRandomCode() {
-        var code = "";
-        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        
-        for (var i = 0; i < 7; i++)
-            code += possible.charAt(Math.floor(Math.random() * possible.length));
-        
-        return code;
-          
     }
 
     render() {

@@ -17,17 +17,16 @@ export class UsableArea extends Component {
     }
 
     componentDidUpdate() {
-        if(this.state.roomSize !== this.props.sizes()[0]) {
-            this.setState({roomSize: this.props.sizes()[0]})
+        if(this.state.roomSize !== this.props.sizes()) {
+            this.setState({roomSize: this.props.sizes()})
         }
     }
 
     componentDidMount() {
-        this.setState({roomSize: this.props.sizes()[0]})
+        this.setState({roomSize: this.props.sizes()})
     }
 
     render() {
-        console.log(this.props.sizes()[0])
         return(
             <UsableAreaWrapper>
                 <UsableAreaHeader>

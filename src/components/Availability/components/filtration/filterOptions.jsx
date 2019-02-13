@@ -6,7 +6,6 @@ import {FilterOptionsContainer,
         ArrowIcon
     } from './filterOptions.s';
 import MaterialIcon from 'material-icons-react';
-import { Database } from '../apartmentsTable/apartmentsDatabase';
 
 export class FilterOptions extends Component {
     constructor() {
@@ -14,14 +13,9 @@ export class FilterOptions extends Component {
 
         this.state = {
             isActive: false,
-            filtration: [],
         }
     }
     
-    componentDidMount() {
-        this.setState({ filtration: Database })
-    }
-
     onMouseOver() {
         this.setState({ isActive: true })
     }
