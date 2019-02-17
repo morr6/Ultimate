@@ -8,7 +8,7 @@ export const UsableAreaWrapper = glamorous.div({
     background: 'rgba(89, 52, 45, .8)',
     padding: '0 30px 15px 30px',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         position: 'absolute',
         top: 550,
         left: 10,
@@ -23,7 +23,7 @@ export const UsableAreaHeader = glamorous.div({
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         padding: '0 10px'
     },
 })
@@ -34,7 +34,7 @@ export const RoomsSizeWrapper = glamorous.div({
     justifyContent: 'space-around',
     flexDirection: 'column',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         padding: '0 10px', 
         fontSize: '13px'
     },

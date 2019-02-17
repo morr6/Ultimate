@@ -16,7 +16,7 @@ export const FilterOptionsContainer = glamorous.div(props => {
             height: 35 + (props.numberOfOptions * 35) + 'px',
         },
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             width: '150px',
             padding: '0',
             margin: '5px 0',
@@ -34,7 +34,7 @@ export const FilterName = glamorous.div({
     paddingLeft: '5px',
     alignItems: 'center',
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '110px'
     },
 })

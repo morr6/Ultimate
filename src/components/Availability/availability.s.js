@@ -7,8 +7,8 @@ export const MainContainer = glamorous.div({
     position: 'relative',
 
     
-    '@media(max-width: 320px)': {
-        width: '320px',
+    '@media(max-width: 480px)': {
+        width: '480px',
         paddingTop: '60px'
       },
 })
@@ -20,7 +20,7 @@ export const Filtration = glamorous.div({
     position: 'relative',
     zIndex: 1,
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         padding: '0',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
@@ -43,7 +43,7 @@ export const FilterButton = glamorous.button({
         transform: 'scale(.95)'
     }, 
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '115px',
     },
 })
@@ -53,7 +53,7 @@ export const PaginationButtons = glamorous.div({
     position: 'absolute',
     top: '700px',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         padding: '0 0 0 50px',
         top: '725px'
     },
@@ -82,7 +82,7 @@ export const TableDriftButtons = glamorous.div(props => {
     return {
         display: 'none',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             marginTop: '5px',
             width: '310px',
             height: '35px',
@@ -97,7 +97,7 @@ export const DriftButton = glamorous.button(props => {
     return {
         display: 'none',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             display: 'flex',
             justifyContent: 'center',
             background: '#00a671',

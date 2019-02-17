@@ -9,7 +9,7 @@ export const SortingCategoryWrapper = glamorous.div({
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         justifyContent: 'flex-start'      
     },
 })
@@ -26,7 +26,7 @@ export const Category = glamorous.div({
     fontSize: '13px',
     fontWeight: 'bold',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         padding: '0 4px 0 4px',
         fontSize: '12px',
     },

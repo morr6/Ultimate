@@ -13,7 +13,7 @@ export const MenuContainer = glamorous.div(props => {
         zIndex: 9999,
         transition: '1s',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             flexDirection: 'column',
             justifyContent: 'space-around',
             height: props.isMenuOpen ? '250px' : '81px'
@@ -37,7 +37,7 @@ export const MenuItem = glamorous.div(props => {
             color: '#00a671',
         },
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             opacity: props.isMenuOpen ? '1' : '0',
         },
     }
@@ -47,7 +47,7 @@ export const SwitchMenuButton = glamorous.button(props => {
     return {
         display: 'none',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             margin: '40px 0 0 0',
             top: 0,
             position: 'absolute',

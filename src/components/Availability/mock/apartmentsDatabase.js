@@ -28,7 +28,7 @@ export const Database = [
     {apartmentsNumber: 'P24 A', storey:'parter', usableArea: 64.32,extra: 'ogródek', garden: 81, price: 289000,plan: 'pobierz', status: 'wolny'},
     {apartmentsNumber: 'P24 B', storey:'piętro', usableArea: 66.57,extra: 'strych', attic: 15, price: 259500,plan: 'pobierz', status: 'wolny'},
     {apartmentsNumber: 'P25 A', storey:'parter', usableArea: 64.32,extra: 'ogródek', garden: 81, price: 289000,plan: 'pobierz', status: 'wolny'},
-    {apartmentsNumber: 'P25 B', storey:'piętro', usableArea: 66.57,extra: 'strych', attic: 15, price: 253200,plan: 'pobierz', status: 'rezerwacja'},
+    {apartmentsNumber: 'P25 B', storey:'piętro', usableArea: 66.57,extra: 'strych', attic: 15, price: 254800,plan: 'pobierz', status: 'rezerwacja'},
     {apartmentsNumber: 'P26 A', storey:'parter', usableArea: 64.32,extra: 'ogródek', garden: 81, price: 252100,plan: 'pobierz', status: 'wolny'},
     {apartmentsNumber: 'P26 B', storey:'piętro', usableArea: 66.57,extra: 'strych', attic: 15, price: 259500,plan: 'pobierz', status: 'rezerwacja'},
     {apartmentsNumber: 'P27 A', storey:'parter', usableArea: 64.32,extra: 'ogródek', garden: 81, price: 242100,plan: 'pobierz', status: 'wolny'},

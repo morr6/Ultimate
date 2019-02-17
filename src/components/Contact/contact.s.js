@@ -11,7 +11,7 @@ export const ContactContaincer = glamorous.div(props => {
         position: 'relative',
         overflow: 'hidden',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             padding: '50px 0 10px 0',
             overflow: 'scroll'
         },
@@ -60,7 +60,7 @@ export const SwitchContactForm = glamorous.div(props => {
     return {
         display: 'none',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             margin: '0',
             top: 0,
             width: '300px',
@@ -82,7 +82,7 @@ export const ArrowIcon = glamorous.div(props => {
     return {
         display: 'none',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             display: 'block',
             transition: '1s',
             transform: props.isFormVisible ? 'rotate(180deg)' : null,
@@ -102,9 +102,9 @@ export const ContactInfo = glamorous.div({
     float: 'left',
     fontSize: '17px',
 
-    '@media(max-width: 320px)': { 
+    '@media(max-width: 480px)': { 
         float: 'none',
-        width: '320px',
+        width: '480px',
         margin: '20px 10px'
     },
 })
@@ -119,7 +119,7 @@ export const ContactAdress = glamorous.div({
     position: 'relative',
     top: '-60px',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         margin: '40px 10px 0 10px',
         top: 0
     },
@@ -136,9 +136,9 @@ export const ContactForm = glamorous.div(props => {
         alignItems: 'center',
         justifyContent: 'space-between', 
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             height: props.isFormVisible ? '500px' : '0px',
-            width: '320px',
+            width: '480px',
             transition: '1s',
             justifyContent: 'space-around',
             margin: '400px 0px 0px 0px',
@@ -160,7 +160,7 @@ export const FormInput = glamorous.input(props => {
         outline: 'none',
         fontSize: '15px',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             padding: '0 0 0 10px',
             width: props.smallInput ? '135px' : '300px',
         },
@@ -179,7 +179,7 @@ export const ContactMessage = glamorous.textarea(props => {
         border: props.validate ? 'none' : '2px solid red',
         background: props.validate ? 'white' : '#fbbebe',
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             padding: '10px 0 0 10px',
             width: '300px',
         },
@@ -192,7 +192,7 @@ export const CodeInputs = glamorous.div({
     height: '35px',
     width: '370px',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '310px',
         padding: '0 10px 0 10px'
     },
@@ -214,7 +214,7 @@ export const SubmintButton = glamorous.button({
         transform: 'scale(.95)'
     },
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '310px',
     },
 })

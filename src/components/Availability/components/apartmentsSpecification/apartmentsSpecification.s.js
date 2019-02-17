@@ -8,7 +8,7 @@ export const SpecificationContainer = glamorous.div(props => {
         position: 'absolute',
         top: 200,
 
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
                 width: '100%',
                 transition: '.7s',
                 marginLeft: -(props.driftCount * 315),

@@ -11,7 +11,7 @@ export const SliderImage = glamorous.img({
     height: '100%',
     width: '100%',
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         objectFit: 'cover'    
     },
     
@@ -25,7 +25,7 @@ export const ArrowsContainer = glamorous.div({
     top: '820px',
     
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         top: '400px',
         padding: '0 15px 0 15px',
         color: '#fff'

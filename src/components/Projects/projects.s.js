@@ -10,7 +10,7 @@ export const ProjectContainer = glamorous.div({
     alignItems: 'center',
     position: 'relative',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
       flexDirection: 'column-reverse'     
     },
 }) 
@@ -21,7 +21,7 @@ export const ImageWrapper = glamorous.div({
     marginLeft: '375px',
     marginRight: '30px',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
       margin: '0',
       width: '300px',
       height: '350px',
@@ -42,7 +42,7 @@ export const UsableAreaWrapper = glamorous.div({
     flexDirection: 'column',
     justifyContent: 'space-between',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '300px',
         height: '330px'
     },
@@ -57,11 +57,11 @@ export const ButtonsWrapper = glamorous.div({
     alignItems: 'center',
     position: 'relative',
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         position: 'absolute',
         top: '50',
         left: '0',
-        width: '320px',
+        width: '480px',
         justifyContent: 'space-around',
         padding: '0',
     },
@@ -84,7 +84,7 @@ export const StoreyButton = glamorous.button({
         transform: 'scale(0.95)'
     },
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '150px'
     },  
 })

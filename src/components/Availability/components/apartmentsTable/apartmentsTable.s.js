@@ -8,7 +8,7 @@ export const DetailsTable = glamorous.div({
     flexDirection: 'column',
     justifyContent: 'flex-start',
 
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         width: '100%',
     },
 })
@@ -30,7 +30,7 @@ export const ApartmentsDetails = glamorous.div({
         background: '#e1e1e1'
     },
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         justifyContent: 'flex-start',
     },
 })
@@ -45,7 +45,7 @@ export const DetailWrapper = glamorous.div(props => {
         color: props.status === 'wolny' ? '#00a671' : 
             props.status === 'sprzedany' ? '#60372f' : '#54555a',
         
-        '@media(max-width: 320px)': {
+        '@media(max-width: 480px)': {
             width: '100px',
             padding: '0 4px 0 4px'
         },

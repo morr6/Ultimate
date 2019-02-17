@@ -6,7 +6,7 @@ export const MessageContainer = glamorous.div({
     textAlign: 'center',
     
     
-    '@media(max-width: 320px)': {
+    '@media(max-width: 480px)': {
         margin: '400px 0 50px 0'
       },
 })
