@@ -63,7 +63,7 @@ export const SwitchContactForm = glamorous.div(props => {
         '@media(max-width: 480px)': {
             margin: '0',
             top: 0,
-            width: '300px',
+            width: '100%px',
             height: '30px',
             fontFamily: RobotoFont,
             background: '#00a670',
