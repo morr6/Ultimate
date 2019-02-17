@@ -1,3 +1,3 @@
-gh-pages DEMO: 
+DEMO: 
 
 https://morr6.github.io/Ultimate/
