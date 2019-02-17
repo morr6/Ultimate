@@ -7,6 +7,7 @@ export const validation = (formValues, generatedCode) => {
         validated: false
     }
     
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     if (formValues.name === '') {
         validation = { ...validation, name: false}
@@ -15,7 +16,7 @@ export const validation = (formValues, generatedCode) => {
         validation = { ...validation, name: true}
     }
     
-    if (formValues.email === '') {
+    if (!formValues.email.match(regex)) {
         validation = { ...validation, email: false}
     }
     else { 
