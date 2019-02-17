@@ -99,7 +99,7 @@ export const DriftButton = glamorous.button(props => {
         '@media(max-width: 480px)': {
             display: 'flex',
             justifyContent: 'center',
-            background: '#00a671',
+            background: props.disabled ? '#e5e5e5' : '#00a671',
             color: 'white',
             fontFamily: 'Roboto, sans-serif',
             fontWeight: 'bold',
