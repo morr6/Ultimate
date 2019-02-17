@@ -61,7 +61,7 @@ export const ButtonsWrapper = glamorous.div({
         position: 'absolute',
         top: '50',
         left: '0',
-        width: '480px',
+        width: '100%',
         justifyContent: 'space-around',
         padding: '0',
     },

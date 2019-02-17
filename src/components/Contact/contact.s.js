@@ -104,7 +104,7 @@ export const ContactInfo = glamorous.div({
 
     '@media(max-width: 480px)': { 
         float: 'none',
-        width: '480px',
+        width: '100%',
         margin: '20px 10px'
     },
 })
