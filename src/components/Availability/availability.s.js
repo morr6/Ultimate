@@ -20,8 +20,7 @@ export const Filtration = glamorous.div({
     position: 'relative',
     zIndex: 1,
 
-    '@media(max-width: 480px)': {
-        width: '100%',
+    '@media(max-width: 480px)': { 
         padding: '0',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
@@ -88,7 +87,7 @@ export const TableDriftButtons = glamorous.div(props => {
             width: '100%',
             height: '35px',
             display: 'flex',
-            justifyContent: 'space-between'
+            justifyContent: 'space-around'
         }
     }
 })
