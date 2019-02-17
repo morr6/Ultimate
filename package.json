@@ -2,11 +2,11 @@
   "name": "ultimate-systems",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://morr6.github.io/Ultimate/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "glamor": "^2.20.40",
     "glamorous": "^5.0.0",
-    "homepage": "https://morr6.github.io/Ultimate/",
     "material-icons-react": "^1.0.4",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
