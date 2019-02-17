@@ -8,7 +8,7 @@ export const MainContainer = glamorous.div({
 
     
     '@media(max-width: 480px)': {
-        width: '480px',
+        width: '320px',
         paddingTop: '60px'
       },
 })
