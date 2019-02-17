@@ -63,7 +63,7 @@ export const SwitchContactForm = glamorous.div(props => {
         '@media(max-width: 480px)': {
             margin: '0',
             top: 0,
-            width: '100%px',
+            width: '90%',
             height: '30px',
             fontFamily: RobotoFont,
             background: '#00a670',
@@ -104,8 +104,8 @@ export const ContactInfo = glamorous.div({
 
     '@media(max-width: 480px)': { 
         float: 'none',
-        width: '90%',
-        margin: '20px 10px'
+        width: '320px',
+        margin: '20px 5%'
     },
 })
 
@@ -138,10 +138,10 @@ export const ContactForm = glamorous.div(props => {
 
         '@media(max-width: 480px)': {
             height: props.isFormVisible ? '500px' : '0px',
-            width: '480px',
+            width: '100%',
             transition: '1s',
             justifyContent: 'space-around',
-            margin: '400px 0px 0px 0px',
+            margin: '350px 0px 0px 0px',
             overflow: 'hidden',
         }
     }
