@@ -86,7 +86,8 @@ export const TableDriftButtons = glamorous.div(props => {
             marginTop: '5px',
             width: '100%',
             height: '35px',
-            padding: '0 5px',
+            paddingLeft: '5%',
+            paddingRight: '5%',
             display: 'flex',
             justifyContent: 'space-between'
         }
