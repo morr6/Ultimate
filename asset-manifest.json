@@ -1,7 +1,7 @@
 {
   "main.css": "/Ultimate/static/css/main.dcbdf053.chunk.css",
-  "main.js": "/Ultimate/static/js/main.b6c54080.chunk.js",
-  "main.js.map": "/Ultimate/static/js/main.b6c54080.chunk.js.map",
+  "main.js": "/Ultimate/static/js/main.45deac8b.chunk.js",
+  "main.js.map": "/Ultimate/static/js/main.45deac8b.chunk.js.map",
   "static/css/1.b26de95b.chunk.css": "/Ultimate/static/css/1.b26de95b.chunk.css",
   "static/js/1.5acdebed.chunk.js": "/Ultimate/static/js/1.5acdebed.chunk.js",
   "static/js/1.5acdebed.chunk.js.map": "/Ultimate/static/js/1.5acdebed.chunk.js.map",
@@ -22,6 +22,6 @@
   "static/css/main.dcbdf053.chunk.css.map": "/Ultimate/static/css/main.dcbdf053.chunk.css.map",
   "static/css/1.b26de95b.chunk.css.map": "/Ultimate/static/css/1.b26de95b.chunk.css.map",
   "index.html": "/Ultimate/index.html",
-  "precache-manifest.70d4199727c5e9cdca9edc779ae7007e.js": "/Ultimate/precache-manifest.70d4199727c5e9cdca9edc779ae7007e.js",
+  "precache-manifest.777546153b5dc0cc6eaa802b24c4f387.js": "/Ultimate/precache-manifest.777546153b5dc0cc6eaa802b24c4f387.js",
   "service-worker.js": "/Ultimate/service-worker.js"
 }
