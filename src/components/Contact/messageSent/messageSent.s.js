@@ -3,7 +3,12 @@ import glamorous from 'glamorous';
 export const MessageContainer = glamorous.div({
     float: 'left',
     marginLeft: '170px',
-    textAlign: 'center'
+    textAlign: 'center',
+    
+    
+    '@media(max-width: 320px)': {
+        margin: '400px 0 50px 0'
+      },
 })
 
 export const MessageIcon = glamorous.img({

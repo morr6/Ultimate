@@ -6,7 +6,11 @@ export const DetailsTable = glamorous.div({
     marginTop: '10px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
+
+    '@media(max-width: 320px)': {
+        width: '100%',
+    },
 })
 
 export const ApartmentsDetails = glamorous.div({
@@ -19,11 +23,16 @@ export const ApartmentsDetails = glamorous.div({
     fontFamily: 'Roboto, sans-serif',
     fontSize: '13px',
     fontWeight: 'bold',
+    margin: '10px 0',
 
     ':hover' : {
         transition: '.5s',
         background: '#e1e1e1'
-    }
+    },
+    
+    '@media(max-width: 320px)': {
+        justifyContent: 'flex-start',
+    },
 })
 
 export const DetailWrapper = glamorous.div(props => {
@@ -34,6 +43,11 @@ export const DetailWrapper = glamorous.div(props => {
         justifyContent: 'center',
         alignItems: 'center',
         color: props.status === 'wolny' ? '#00a671' : 
-            props.status === 'sprzedany' ? '#60372f' : '#54555a'
+            props.status === 'sprzedany' ? '#60372f' : '#54555a',
+        
+        '@media(max-width: 320px)': {
+            width: '100px',
+            padding: '0 4px 0 4px'
+        },
     }
 })

@@ -14,17 +14,29 @@ export const FilterOptionsContainer = glamorous.div(props => {
 
         ':hover' : {
             height: 35 + (props.numberOfOptions * 35) + 'px',
-        }
+        },
+
+        '@media(max-width: 320px)': {
+            width: '150px',
+            padding: '0',
+            margin: '5px 0',
+            position: 'relative'
+        },
     }
 })
 
 export const FilterName = glamorous.div({
     height: '35px',
-    width: '135px',
+    width: '130px',
     float: 'left',
     display: 'flex',
     justifyContent: 'flex-start',
+    paddingLeft: '5px',
     alignItems: 'center',
+    
+    '@media(max-width: 320px)': {
+        width: '110px'
+    },
 })
 
 export const ArrowIcon = glamorous.div(props => {
@@ -37,7 +49,7 @@ export const ArrowIcon = glamorous.div(props => {
         justifyContent: 'center',
         alignItems: 'flex-end',
         transition: '.75s',
-        transform: props.isActive ? 'rotate(180deg)' : null
+        transform: props.isActive ? 'rotate(180deg)' : null,
     }
 })
 
@@ -47,9 +59,10 @@ export const FilterOption = glamorous.input({
     height: '23px',
 })
 
-export const OptionLabel = glamorous.div({
+export const OptionLabel = glamorous.label({
     height: '35px',
     width: '170px',
+    fontSize: '13px',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center'

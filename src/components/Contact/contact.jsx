@@ -11,13 +11,16 @@ import {ContactContaincer,
         FormInput,
         ContactMessage,
         CodeInputs,
-        SubmintButton
+        SubmintButton,
+        SwitchContactForm,
+        ArrowIcon
     } from './contact.s';
 import IconSrc from '../../assets/contact/icon.png';
 import LogoSrc from '../../assets/contact/logo.png'
 import {validation} from './utilities/validation';
 import {MessageSent} from './messageSent/messageSent';
 import {generateRandomCode} from './utilities/generateRandomCode'
+import MaterialIcon from 'material-icons-react';
 
 export class Contact extends Component {
 
@@ -25,6 +28,7 @@ export class Contact extends Component {
         super();
         
         this.state = {
+            isFormVisible: false,
             generatedCode: generateRandomCode(),
             validation: {
                 name: true,
@@ -74,6 +78,10 @@ export class Contact extends Component {
         this.setState({ validation: validation(formValues, this.state.generatedCode) })
     }
 
+    switchContactForm() {
+        this.setState({ isFormVisible: this.state.isFormVisible ? false : true })
+    }
+
     render() {
         return (
             <ContactContaincer>
@@ -104,21 +112,21 @@ export class Contact extends Component {
                 </Data>
                { this.state.validation.validated === true ? <MessageSent/> :
                 <form onSubmit={(event) => this.onSubmit(event)}>
-                    <ContactForm>
+                    <ContactForm isFormVisible={this.state.isFormVisible}>
                         <FormInput 
-                            onChange={ (event) => this.formHandler(event)} 
+                            onChange={(event) => this.formHandler(event)} 
                             validate={this.state.validation.name}
                             name='name' 
                             placeholder='imię i nazwisko' 
                         />                        
                         <FormInput 
-                            onChange={ (event) => this.formHandler(event)} 
+                            onChange={(event) => this.formHandler(event)} 
                             validate={this.state.validation.email}
                             name='email' 
                             placeholder='e-mail' 
                         />
                         <ContactMessage 
-                            onChange={ (event) => this.formHandler(event)} 
+                            onChange={(event) => this.formHandler(event)} 
                             validate={this.state.validation.message}
                             name='message' 
                             placeholder='treść wiadomości' 
@@ -131,7 +139,7 @@ export class Contact extends Component {
                                 value={this.state.generatedCode} 
                             />
                             <FormInput 
-                                onChange={ (event) => this.formHandler(event)} 
+                                onChange={(event) => this.formHandler(event)} 
                                 validate={this.state.validation.code}
                                 name='code' 
                                 smallInput={true} 
@@ -139,10 +147,21 @@ export class Contact extends Component {
                             />
                         </CodeInputs>
                         <SubmintButton type='submit'> WYSŁANIE FORMULARZA </SubmintButton>
-                    </ContactForm>     
+                    </ContactForm>
                 </form> 
                 }
-
+                { !this.state.validation.validated &&
+                    <SwitchContactForm onClick={ () => this.switchContactForm() }>
+                        { this.state.isFormVisible ? 'MNIEJ' : 'NAPISZ DO NAS'}
+                        <ArrowIcon isFormVisible={this.state.isFormVisible}>
+                            <MaterialIcon
+                                icon='expand_more'
+                                size='30'
+                                color='white'
+                            />   
+                        </ArrowIcon>
+                    </SwitchContactForm>
+                }
             </ContactContaincer>
         )
     }

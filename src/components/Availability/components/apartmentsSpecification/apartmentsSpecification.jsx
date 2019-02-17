@@ -6,7 +6,7 @@ import { ApartmentsTable } from '../apartmentsTable/apartmentsTable'
 export class ApartmentsSpecification extends Component {
     render() {
         return(
-            <SpecificationContainer>
+            <SpecificationContainer driftCount={this.props.driftCount}>
                 <SortingCategory />
                 <ApartmentsTable 
                     page={this.props.page}

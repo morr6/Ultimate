@@ -1,14 +1,20 @@
 import glamorous from 'glamorous';
 
-
-
 export const UsableAreaWrapper = glamorous.div({        
     fontFamily: 'Roboto, sans-serif',
     color: 'white',
     fontSize: '17px',
     height: '380px',
     background: 'rgba(89, 52, 45, .8)',
-    padding: '0 30px 15px 30px'    
+    padding: '0 30px 15px 30px',
+
+    '@media(max-width: 320px)': {
+        position: 'absolute',
+        top: 550,
+        left: 10,
+        width: '300px', 
+        padding: 0
+    },
 })
 
 export const UsableAreaHeader = glamorous.div({
@@ -16,6 +22,10 @@ export const UsableAreaHeader = glamorous.div({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+
+    '@media(max-width: 320px)': {
+        padding: '0 10px'
+    },
 })
 
 export const RoomsSizeWrapper = glamorous.div({
@@ -23,6 +33,11 @@ export const RoomsSizeWrapper = glamorous.div({
     display: 'flex',
     justifyContent: 'space-around',
     flexDirection: 'column',
+
+    '@media(max-width: 320px)': {
+        padding: '0 10px', 
+        fontSize: '13px'
+    },
 })
 
 export const RoomSize = glamorous.div({

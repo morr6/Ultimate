@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {FilterOptionsContainer, 
-        FilterOption, 
-        OptionLabel, 
-        FilterName, 
+import {FilterOptionsContainer,
+        FilterOption,
+        OptionLabel,
+        FilterName,
         ArrowIcon
     } from './filterOptions.s';
 import MaterialIcon from 'material-icons-react';
@@ -15,7 +15,7 @@ export class FilterOptions extends Component {
             isActive: false,
         }
     }
-    
+
     onMouseOver() {
         this.setState({ isActive: true })
     }
@@ -26,29 +26,30 @@ export class FilterOptions extends Component {
 
     render() {
         return(
-            <FilterOptionsContainer 
-                onMouseOver={ () => this.onMouseOver()}
-                onMouseLeave={ () => this.onMouseLeave()}
-                numberOfOptions={this.props.options.length}
+            <FilterOptionsContainer
+                onMouseOver={ () => this.onMouseOver() }
+                onMouseLeave={ () => this.onMouseLeave() }
+                numberOfOptions={ this.props.values && this.props.values.length }
             >
                 <FilterName>
                     { this.props.filterCategory }
-                </FilterName>        
+                </FilterName>
                 <ArrowIcon isActive={this.state.isActive}>
-                    <MaterialIcon 
+                    <MaterialIcon
                         icon='expand_more'
                         size='29'
                         color='white'
                     />
-                </ArrowIcon>        
+                </ArrowIcon>
                 {
-                this.props.options.map((option,key) => 
+                this.props.values && this.props.values.map((option,key) =>
                     <label key={key}>
-                        <OptionLabel onClick={() => this.props.addFilters(this.props.type, option)}>
-                            <FilterOption 
-                                type='checkbox'  
+                        <OptionLabel>
+                            <FilterOption
+                                type='checkbox'
+                                onChange={(ev) => this.props.onChange(ev.target.checked, option)}
                             />
-                            {option}
+                            { option.label || option}
                         </OptionLabel>
                     </label>
                 )

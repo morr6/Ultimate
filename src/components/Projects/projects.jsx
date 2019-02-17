@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {ProjectContainer, 
-        ProjectImage, 
+import {ProjectContainer,
+        ProjectImage,
         ImageWrapper,
         StoreyButton,
         ButtonsWrapper,
@@ -10,7 +10,7 @@ import LeftParter from '../../assets/projects/leftParter.png';
 import RightParter from '../../assets/projects/rightParter.png';
 import RightFloor from '../../assets/projects/rightFloor.png';
 import LeftFloor from '../../assets/projects/leftFloor.png';
-import {UsableArea } from './components/usableArea/usableArea';
+import {UsableArea } from './usableArea/usableArea';
 import {RoomsSize} from './consts/roomsSize';
 import {ApartmentType} from './consts/apartamentType'
 
@@ -29,7 +29,7 @@ export class Projects extends Component {
         this.setState({selectedApartment})
     }
 
-    getRoomSizeForSelectedApartment () { 
+    getRoomSizeForSelectedApartment () {
         return RoomsSize.filter(room => {
             return room.name === this.state.selectedApartment
         })
@@ -62,23 +62,23 @@ export class Projects extends Component {
                     <ButtonsWrapper>
                         <StoreyButton
                             onClick={ () => this.changeSelectedApartment('leftParter')}
-                        > 
-                            PARTER LEWY 
+                        >
+                            PARTER LEWY
                         </StoreyButton>
-                        <StoreyButton 
+                        <StoreyButton
                             onClick={ () => this.changeSelectedApartment('rightParter')}
-                        > 
-                            PARTER PRAWY 
+                        >
+                            PARTER PRAWY
                         </StoreyButton>
-                        <StoreyButton 
+                        <StoreyButton
                             onClick={ () => this.changeSelectedApartment('leftFloor')}
-                        > 
-                            PIĘTRO LEWE 
+                        >
+                            PIĘTRO LEWE
                         </StoreyButton>
-                        <StoreyButton 
+                        <StoreyButton
                             onClick={ () => this.changeSelectedApartment('rightFloor')}
-                        > 
-                            PIĘTRO PRAWE 
+                        >
+                            PIĘTRO PRAWE
                         </StoreyButton>
                     </ButtonsWrapper>
                     <UsableArea sizes={ () => this.getRoomSizeForSelectedApartment ()[0]}/>

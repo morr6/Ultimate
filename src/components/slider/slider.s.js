@@ -9,15 +9,27 @@ export const SliderMainContainer = glamorous.div({
 
 export const SliderImage = glamorous.img({ 
     height: '100%',
-    width: '100%'
+    width: '100%',
+    
+    '@media(max-width: 320px)': {
+        objectFit: 'cover'    
+    },
+    
 })
 
 export const ArrowsContainer = glamorous.div({
-display: 'flex',
-justifyContent: 'space-between',
-padding: '0 75px 0 75px',
-position: 'relative',
-top: '820px'
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0 75px 0 75px',
+    position: 'relative',
+    top: '820px',
+    
+    
+    '@media(max-width: 320px)': {
+        top: '400px',
+        padding: '0 15px 0 15px',
+        color: '#fff'
+      },
 })
 
 export const LeftArrow = glamorous.div({

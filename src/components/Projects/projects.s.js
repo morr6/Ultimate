@@ -3,17 +3,31 @@ import * as BackgroundUrl from '../../assets/bg.png'
 
 export const ProjectContainer = glamorous.div({
     background: `url(${ BackgroundUrl })`,
-    height: '855px',
+    backgroundSize: 'cover',
+    height: '1000px',
     width: '100%',
     display: 'flex',
     alignItems: 'center',
+    position: 'relative',
+
+    '@media(max-width: 320px)': {
+      flexDirection: 'column-reverse'     
+    },
 }) 
 
 export const ImageWrapper = glamorous.div({
     width: '570px',
     height: '650px',
     marginLeft: '375px',
-    marginRight: '30px'
+    marginRight: '30px',
+
+    '@media(max-width: 320px)': {
+      margin: '0',
+      width: '300px',
+      height: '350px',
+      position: 'absolute',
+      top: 175
+    },
 })
 
 export const ProjectImage = glamorous.img({
@@ -26,7 +40,12 @@ export const UsableAreaWrapper = glamorous.div({
     height: '650px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+
+    '@media(max-width: 320px)': {
+        width: '300px',
+        height: '330px'
+    },
 })
 
 export const ButtonsWrapper = glamorous.div({
@@ -36,6 +55,16 @@ export const ButtonsWrapper = glamorous.div({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'relative',
+    
+    '@media(max-width: 320px)': {
+        position: 'absolute',
+        top: '50',
+        left: '0',
+        width: '320px',
+        justifyContent: 'space-around',
+        padding: '0',
+    },
 })
 
 export const StoreyButton = glamorous.button({
@@ -53,5 +82,9 @@ export const StoreyButton = glamorous.button({
     ':active' : {
         transition: '.1s',
         transform: 'scale(0.95)'
-    }
+    },
+
+    '@media(max-width: 320px)': {
+        width: '150px'
+    },  
 })

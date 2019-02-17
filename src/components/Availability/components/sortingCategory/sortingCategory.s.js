@@ -8,6 +8,10 @@ export const SortingCategoryWrapper = glamorous.div({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+
+    '@media(max-width: 320px)': {
+        justifyContent: 'flex-start'      
+    },
 })
 
 export const Category = glamorous.div({
@@ -21,6 +25,11 @@ export const Category = glamorous.div({
     fontFamily: 'Roboto, sans-serif',
     fontSize: '13px',
     fontWeight: 'bold',
+
+    '@media(max-width: 320px)': {
+        padding: '0 4px 0 4px',
+        fontSize: '12px',
+    },
 })
 
 export const SortIcon = glamorous.div({

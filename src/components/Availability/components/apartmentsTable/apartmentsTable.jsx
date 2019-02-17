@@ -13,12 +13,12 @@ export class ApartmentsTable extends Component {
     getEnd() {
         return this.props.page * 10
     }
-
+    w
     render() {
         return(
             <DetailsTable>
                 {   
-                    this.props.apartments.slice(this.getStart(), this.getEnd()).map((apartments,key) => 
+                    this.props.apartments.map((apartments,key) => 
                         <ApartmentsDetails key={key}>
                             <DetailWrapper> 
                                 { apartments.apartmentsNumber } 
