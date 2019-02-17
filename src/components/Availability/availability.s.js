@@ -21,6 +21,7 @@ export const Filtration = glamorous.div({
     zIndex: 1,
 
     '@media(max-width: 480px)': {
+        width: '100%',
         padding: '0',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
