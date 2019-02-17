@@ -12,7 +12,7 @@ export const UsableAreaWrapper = glamorous.div({
         position: 'absolute',
         top: 550,
         left: 10,
-        width: '100%', 
+        width: '90%', 
         padding: 0
     },
 })
